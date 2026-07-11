@@ -17,4 +17,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt pytest
       - name: Run unit tests
+        env:
+          DEEPSEEK_API_KEY: dummy-key-for-offline-tests
         run: python -m pytest tests/ -q
