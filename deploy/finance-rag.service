@@ -1,0 +1,23 @@
+[Unit]
+Description=财务RAG问答系统 (Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+# ↓↓↓ 按你的服务器实际情况修改这4项 ↓↓↓
+User=finance
+WorkingDirectory=/opt/finance-rag
+Environment="HF_HUB_OFFLINE=1"
+Environment="TRANSFORMERS_OFFLINE=1"
+# 安全：仅监听本机 127.0.0.1，对外由 nginx 反代 + HTTPS 暴露（见 deploy/nginx-finance-rag.conf）
+# 若暂不上 nginx（纯内网直连），才把地址改回 0.0.0.0
+ExecStart=/opt/finance-rag/.venv/bin/streamlit run app.py --server.address 127.0.0.1 --server.port 8501 --server.headless true
+# ↑↑↑ 路径要与实际部署目录、虚拟环境一致 ↑↑↑
+
+Restart=always
+RestartSec=5
+StandardOutput=append:/opt/finance-rag/logs/service.log
+StandardError=append:/opt/finance-rag/logs/service.err
+
+[Install]
+WantedBy=multi-user.target

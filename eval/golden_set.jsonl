@@ -1,0 +1,32 @@
+{"id": "T01", "type": "text", "question": "应付账款对账的数据从哪个模块导出？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["AP-130"], "reference_answer": "在ERP系统的入库查询模块（作业代码AP-130）导出当月外购入库数据，账期日期为上月26日至本月25日。"}
+{"id": "T02", "type": "text", "question": "应付账款对账的账期日期范围是怎么规定的？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["26", "25"], "reference_answer": "账期日期为上月26日至本月25日。"}
+{"id": "T03", "type": "text", "question": "供应商对账单核对无误后需要做什么？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["财务专用章"], "reference_answer": "所有对账单核对无误后加盖财务专用章；如有扣款需另附扣款单。"}
+{"id": "T04", "type": "text", "question": "应付发票审核在哪个模块操作？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["AP-110"], "reference_answer": "在发票审核模块（作业代码AP-110）按供应商检索，核对发票与入库登记信息一致后提交审核。"}
+{"id": "T05", "type": "text", "question": "应付会计自己录入的发票能自己审核吗？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["总账会计"], "reference_answer": "不能，为职责分离，应付会计本人录入的发票不得由本人审核，须由总账会计复核。"}
+{"id": "T06", "type": "text", "question": "什么条件下才可以执行暂估立账作业？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["关账"], "reference_answer": "月末库存关账且当月需入账的进项发票全部审核完成后方可执行暂估立账；当月已入库未收到发票的入库单一律暂估入账。"}
+{"id": "T07", "type": "text", "question": "应付月结之后发现数据要修改怎么办？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["反月结"], "reference_answer": "月结后如需修改数据，须执行反月结（月结还原）后方可调整。"}
+{"id": "T08", "type": "text", "question": "付款给国外供应商时要特别注意什么？", "expected_files": ["应付账款管理制度.docx"], "expected_keywords": ["汇率"], "reference_answer": "付款信息上的汇率必须与原请款单汇率一致，出现差异须重新走请款审批。"}
+{"id": "T09", "type": "text", "question": "财务部上下班时间是几点到几点？", "expected_files": ["财务部考勤制度.docx"], "expected_keywords": ["8点30", "18"], "reference_answer": "工作时间为周一至周五，早上8点30分至下午18点，中午休息时间12:15-14:00。"}
+{"id": "T10", "type": "text", "question": "迟到早退有什么规定？", "expected_files": ["财务部考勤制度.docx"], "expected_keywords": ["15分钟"], "reference_answer": "单次迟到或早退不得超过15分钟，且1个月内累计迟到、早退不得超过3次，超出按旷工半天处理。"}
+{"id": "T11", "type": "text", "question": "调休的最小单位时长是多少？", "expected_files": ["财务部考勤制度.docx"], "expected_keywords": ["0.5"], "reference_answer": "调休的最小单位时长为0.5小时，需提前一天在OA系统提交申请。"}
+{"id": "T12", "type": "text", "question": "费用发生后多久之内必须完成报销？", "expected_files": ["费用报销管理制度.docx"], "expected_keywords": ["3个月"], "reference_answer": "费用发生后应在3个月内完成报销，跨年度费用原则上不予报销。"}
+{"id": "T13", "type": "text", "question": "单笔报销超过多少金额需要总经理审批？", "expected_files": ["费用报销管理制度.docx"], "expected_keywords": ["50000"], "reference_answer": "单笔超过50000元须总经理审批；5000元（含）以下部门负责人审批；超过5000元加签财务负责人。"}
+{"id": "T14", "type": "text", "question": "国内出差一线城市的住宿标准是多少？", "expected_files": ["费用报销管理制度.docx"], "expected_keywords": ["450"], "reference_answer": "一线城市住宿标准为每晚不超过450元，其他城市每晚不超过350元。"}
+{"id": "T15", "type": "text", "question": "中午12点可以去吃饭吗？", "expected_files": ["财务部考勤制度.docx"], "expected_keywords": ["12"], "reference_answer": "按考勤制度，中午休息时间为12:15-14:00，12点整还未到午休时间，应到12点15分再去用餐。"}
+{"id": "N01", "type": "negative", "question": "公司年终奖的发放标准是什么？", "expected_files": [], "reference_answer": "知识库中无此内容，应回答未找到。"}
+{"id": "N02", "type": "negative", "question": "公司股权激励政策是怎么规定的？", "expected_files": [], "reference_answer": "知识库中无此内容，应回答未找到。"}
+{"id": "N03", "type": "negative", "question": "公司食堂就餐补贴标准是多少？", "expected_files": [], "reference_answer": "知识库中无此内容，应回答未找到。"}
+{"id": "N04", "type": "negative", "question": "工作可以在下班之后再完成吗？", "expected_files": [], "reference_answer": "知识库中无此规定，应回答未找到，且不得先给出可以/不可以的判断。"}
+{"id": "D01", "type": "data", "question": "深圳星辰数字科技集团股份有限公司2025年营业收入是多少？", "expected_files": ["01深圳星辰数字科技集团股份有限公司_2025TB.xlsx"], "expected_values": ["580231456.78"], "reference_answer": "母公司单体口径营业收入本期数为580,231,456.78元。"}
+{"id": "D02", "type": "data", "question": "星辰集团合并口径2025年净利润是多少？", "expected_files": ["合并0：星辰集团_2025TB.xlsx"], "expected_values": ["223626681.58"], "reference_answer": "集团合并口径净利润本期数为223,626,681.58元。"}
+{"id": "D03", "type": "data", "question": "深圳市辰拓智能设备有限公司2025年净利润是多少？", "expected_files": ["02深圳市辰拓智能设备有限公司_2025TB.xlsx"], "expected_values": ["48244170.66"], "reference_answer": "辰拓单体口径净利润本期数为48,244,170.66元。"}
+{"id": "D04", "type": "data", "question": "星美2025年营业收入是多少？", "expected_files": ["03深圳星美智能材料有限公司_2025TB.xlsx"], "expected_values": ["263918570.41"], "reference_answer": "深圳星美智能材料有限公司单体营业收入本期数为263,918,570.41元。"}
+{"id": "D05", "type": "data", "question": "香港星辰2025年净利润是多少？", "expected_files": ["08STARNOVA (HONG KONG) LIMITED_2025TB.xlsx"], "expected_values": ["14986458.99"], "reference_answer": "STARNOVA (HONG KONG) LIMITED净利润本期数为14,986,458.99元。"}
+{"id": "D06", "type": "data", "question": "马来西亚星辰的净利润是多少？", "expected_files": ["08-1STARNOVA MALAYSIA SDN. BHD._2025TB（人民币）.xlsx", "08-1STARNOVA MALAYSIA SDN. BHD._2025TB（林吉特）.xlsx"], "expected_values": [], "reference_answer": "应同时给出人民币（6,744,404.65元）和林吉特（4,351,228.81）两个币种版本的净利润并标注币种。"}
+{"id": "D07", "type": "data", "question": "星锐2025年营业收入是多少？", "expected_files": ["05深圳星锐精密装备有限公司_2025TB.xlsx"], "expected_values": ["152406385.19"], "reference_answer": "深圳星锐精密装备有限公司营业收入本期数为152,406,385.19元。"}
+{"id": "D08", "type": "data", "question": "惠州星辰实业2025年营业收入是多少？", "expected_files": ["11惠州星辰实业有限公司_2025TB.xlsx"], "expected_values": ["213754692.37"], "reference_answer": "惠州星辰实业有限公司营业收入本期数为213,754,692.37元。"}
+{"id": "D09", "type": "data", "question": "星辰集团合并报表的资产总计是多少？", "expected_files": ["合并0：星辰集团_2025TB.xlsx"], "expected_values": ["1704337630.67"], "reference_answer": "集团合并口径资产总计期末数为1,704,337,630.67元。"}
+{"id": "D10", "type": "data", "question": "对比一下辰拓和星美2025年的净利润", "expected_files": ["02深圳市辰拓智能设备有限公司_2025TB.xlsx", "03深圳星美智能材料有限公司_2025TB.xlsx"], "expected_values": ["48244170.66", "47445960.99"], "reference_answer": "辰拓单体净利润48,244,170.66元，星美单体净利润47,445,960.99元，辰拓略高于星美。"}
+{"id": "D11", "type": "data", "question": "辰拓2025年的净利率是多少？", "expected_files": ["02深圳市辰拓智能设备有限公司_2025TB.xlsx"], "expected_values": ["48244170.66", "321574208.65"], "reference_answer": "净利率=净利润48,244,170.66/营业收入321,574,208.65≈15.0%。"}
+{"id": "D12", "type": "data", "question": "星辰集团2025年合并营业收入是多少？", "expected_files": ["合并0：星辰集团_2025TB.xlsx"], "expected_values": ["1352648913.24"], "reference_answer": "集团合并口径营业收入本期数为1,352,648,913.24元。"}
+{"id": "D13", "type": "data", "question": "辰拓合并口径2025年净利润是多少？", "expected_files": ["合并1：辰拓合并_2025TB.xlsx"], "expected_values": ["60271087.50"], "reference_answer": "辰拓合并口径净利润本期数为60,271,087.50元。"}

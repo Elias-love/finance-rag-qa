@@ -1,0 +1,32 @@
+# ===== 财务RAG问答系统 依赖清单 =====
+# Python 3.10 ~ 3.13 均可
+
+# --- 文档解析 ---
+PyMuPDF>=1.24.0          # PDF解析(import fitz)
+python-docx>=1.1.0       # Word解析
+openpyxl>=3.1.0          # Excel读写
+pandas>=2.2.0            # 表格处理
+Pillow>=10.0.0           # 图片尺寸检测/截图处理（docx/pdf图片提取必需）
+
+# --- 向量与嵌入 ---
+chromadb>=0.5.0
+sentence-transformers>=3.0.0   # 加载 BAAI/bge-small-zh-v1.5
+
+# --- LLM ---
+openai>=1.30.0           # 调用 DeepSeek（OpenAI兼容接口）
+
+# --- Web界面 ---
+streamlit>=1.37.0
+
+# --- 数据导出与可视化 ---
+fpdf2>=2.7.0             # 导出PDF（import fpdf）
+matplotlib>=3.8.0        # 生成可下载的图表PNG（中文用NotoSansSC）
+plotly>=5.20.0           # 页面交互式统计图（折线/柱状/饼图）
+
+# --- 工具 ---
+python-dotenv>=1.0.0
+loguru>=0.7.0
+pypinyin>=0.50.0         # 公司名同音纠错（兴美→星美）
+
+# --- 可选：扫描件OCR（体积大，含PyTorch；只处理纯文字PDF/Word/Excel时可不装）---
+# easyocr>=1.7.0

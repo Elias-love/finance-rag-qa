@@ -1,0 +1,28 @@
+# 敏感配置（含 API Key、管理员密码）
+.env
+*.env
+
+# 数据与产物
+data/uploads/
+data/exports/
+data/extracted_images/
+data/chroma_db/
+data/*.db
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 系统/IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# 评估产物（本地对比用，不入库）
+eval/reports/
