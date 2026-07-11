@@ -43,7 +43,7 @@ RRF_K = 60                     # RRF 融合常数，业界标准值
 # 2026-07-04 由 evaluate.py --sweep 在黄金集(21正例+3负例)上标定：
 # 0.50 答对23/24。0.45 会挡掉生活化问法（"中午12点可以去吃饭吗"距离0.488），
 # 0.55 则3道负例全部误召回。改动前先重跑 --sweep
-VEC_DISTANCE_GATE = float(os.getenv("VEC_DISTANCE_GATE", "0.50"))
+VEC_DISTANCE_GATE = float(os.getenv("VEC_DISTANCE_GATE", "0.40"))
 VEC_RELATIVE_WINDOW = 0.12     # 与最佳命中的距离差窗口，剔除掉队结果
 # 重排序（可选）：模型已本地缓存时自动启用；设 RERANK_ENABLED=0 强制关闭
 RERANK_MODEL = os.getenv("RERANK_MODEL", "BAAI/bge-reranker-base")

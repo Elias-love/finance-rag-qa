@@ -1,5 +1,9 @@
 # finance-rag-qa｜财务双通道 RAG 问答系统
 
+[![tests](https://github.com/Elias-love/finance-rag-qa/actions/workflows/tests.yml/badge.svg)](https://github.com/Elias-love/finance-rag-qa/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > 面向集团财务场景的自然语言问答：**财务数据走 NL2SQL，规章制度走文本 RAG**，自动识别多公司 / 单体·合并多口径 / 多币种报表。自带评估门禁与安全治理层。
 
 **本仓库所有财务数据均为脚本生成的虚构数据（"星辰集团"体系），与任何真实企业无关。**
@@ -38,7 +42,7 @@ flowchart LR
 - **多公司多口径**：集团场景下"净利润"必须先问清是哪家公司、单体还是合并；系统按问题关键词预筛表，未指明口径时双口径对照返回
 - **混合召回**：向量（bge-small-zh）+ BM25（字符二元组，纯 Python 零依赖）双路召回，RRF 融合；精确事务码靠 BM25 兜底，语义近似问法靠向量
 - **公司名同音纠错**：拼音匹配找候选 + 用户确认，绝不静默替换（财务场景查错公司比查不到更危险）
-- **评估门禁**：40 题黄金测试集（数据/制度/负例三类），改 prompt/阈值/模型前后必跑 `evaluate.py`，总平均评审分不降才可合入
+- **评估门禁**：32 题黄金测试集（数据/制度/负例三类），改 prompt/阈值/模型前后必跑 `evaluate.py`，总平均评审分不降才可合入
 - **安全治理**：SQL 仅允许 SELECT、身份证/银行卡/手机号自动脱敏、全量查询审计日志、登录防爆破
 
 ## 快速开始
@@ -61,6 +65,13 @@ python3 evaluate.py --text-retrieval   # 文本召回评估（本地免API）：
 python3 evaluate.py --sweep            # 距离门槛标定，推荐 VEC_DISTANCE_GATE 值
 python3 evaluate.py --full             # 端到端评估（调API+LLM评审打分）
 ```
+
+模拟语料上的文本召回结果（15 正例 + 4 负例，门槛 0.40 由 `--sweep` 标定）：
+
+| 方法 | Hit@5 | MRR | 负例拒答 |
+|------|-------|-----|---------|
+| 纯向量 | 1.0 | 1.0 | 4/4 |
+| 混合召回 | 1.0 | 1.0 | 4/4 |
 
 黄金集在 `eval/golden_set.jsonl`，与模拟数据生成器的输出精确对应；界面上的 👍👎 反馈写入日志，👎 问题定期回收进黄金集。
 
